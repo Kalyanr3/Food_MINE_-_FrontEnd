@@ -41,10 +41,10 @@ const loginHandler = async(e) => {
     if(vendorResponse.ok){
       const vendorFirmId = vendorData.vendorFirmId;
       console.log("Checking for FirmId: ",vendorFirmId);
-      const vendorFirmName = vendorData.vendor.firm[0].firmName;
-      console.log("My firmName is ", vendorFirmName);
       localStorage.setItem('firmId', vendorFirmId);
-      localStorage.setItem('firmName', vendorFirmName);
+      // const vendorFirmName = vendorData.vendor.firm[0].firmName;
+      // console.log("My firmName is ", vendorFirmName);
+      // localStorage.setItem('firmName', vendorFirmName);
       window.location.reload();
     }
 
