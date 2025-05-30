@@ -14,12 +14,13 @@ const loginHandler = async(e) => {
   try {
     const response = await fetch(`${API_URL}/vendor/login`,{
       method:'POST',
+      // credentials: 'include',
       headers: {
         'Content-Type' : 'application/json'
       },
       body: JSON.stringify({email, password})
     });
-
+  
     const data = await response.json();
 
     if(response.ok){
